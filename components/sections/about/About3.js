@@ -20,9 +20,9 @@ export default function About3({ icon, helperCls, newImg }) {
                                 {icon ?
                                     <>
                                         {/* Title */}
-                                        <h2 className="h2-sm coffee-color">Nothing brings people together like a good burger</h2>
+                                        <h2 className="h2-sm coffee-color">For whom is our solution</h2>
                                         {/* Text */}
-                                        <p className="p-md grey-color">Porta semper lacus cursus, feugiat primis ultrice a ligula risus auctor an tempus
+                                        <p className="p-md grey-color">For whom Porta semper lacus cursus, feugiat primis ultrice a ligula risus auctor an tempus
                                             feugiat dolor lacinia cubilia curae at integer orci congue and metus in mollislorem primis gravida
                                         </p>
                                         {/* Icons List */}
@@ -89,7 +89,7 @@ export default function About3({ icon, helperCls, newImg }) {
                                                 <p className="p-md">Quaerat sodales sapien euismod purus blandit</p>
                                             </li>
                                             <li className="list-item">
-                                                <p className="p-md">Nemo ipsam egestas volute turpis dolores ut aliquam quaerat sodales
+                                                <p className="p-md">For egestas volute turpis dolores ut aliquam quaerat sodales
                                                     sapien undo pretium a purus mauris
                                                 </p>
                                             </li>

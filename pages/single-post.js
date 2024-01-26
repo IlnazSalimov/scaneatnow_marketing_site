@@ -8,7 +8,7 @@ export default function Home() {
             <Layout
                 pageId={"blog-page"}
                 activePage={"Blog Post"}
-                pageTitle={"Single Blog Post"}
+                pageTitle={"Single Blog Post 2"}
                 headerStyle={1}
                 footerStyle={1}
             >

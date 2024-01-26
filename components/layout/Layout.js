@@ -28,7 +28,7 @@ export default function Layout({ headerStyle, footerStyle, children, pageTitle, 
     return (
         <>
             <PageHead />
-            <StyleSwitch />
+            {/*<StyleSwitch />*/}
             {!headerStyle && <Header1 headerCls={headerCls} scroll={scroll} isToggled={isToggled} handleToggle={handleToggle} />}
             {headerStyle == 1 && <Header1 headerCls={headerCls} scroll={scroll} isToggled={isToggled} handleToggle={handleToggle} />}
             {headerStyle == 2 && <Header2 headerCls={headerCls} scroll={scroll} isToggled={isToggled} handleToggle={handleToggle} />}
