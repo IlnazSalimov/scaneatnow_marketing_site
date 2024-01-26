@@ -105,7 +105,7 @@ export default function Home() {
                                     {/* Title 	*/}
                                     <h2 className="h2-xl">Get in Touch</h2>
                                     {/* Text */}
-                                    <p className="p-xl">Contact us if you have any questions or if you would like to schedule a demo.</p>
+                                    <p className="p-xl">If you have any questions or would like to schedule a demo, please contact us. We offer both online meetings and in-person demonstrations at your location, depending on your preference.</p>
                                 </div>
                             </div>
                         </div>
