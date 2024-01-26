@@ -1,6 +1,5 @@
 
 export default function Forwhom({ icon, helperCls, newImg }) {
-    const videoSrc = "/images/our-solution/counter service.mp4";
     const youtubeUrl = "https://www.youtube.com/embed/evZwsIagNNw";
     return (
         <>
