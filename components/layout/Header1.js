@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { useState } from "react";
-export default function Header1({ headerCls, scroll, isToggled, handleToggle }) {
+import {useState} from "react";
+
+export default function Header1({headerCls, scroll, isToggled, handleToggle}) {
 
     const [isActive, setIsActive] = useState({
         status: false,
@@ -22,59 +23,47 @@ export default function Header1({ headerCls, scroll, isToggled, handleToggle }) 
 
     return (
         <>
-            <header id="header-1" className={`header navik-header header-shadow center-menu-1 header-transparent ${headerCls ? headerCls : ""} ${scroll ? "sticky" : "header-transparent-on"}`}>
+            <header id="header-1"
+                    className={`header navik-header header-transparent header-shadow viewport-lg ${headerCls ? headerCls : ""} ${scroll ? "sticky" : "header-transparent-on"}`}>
                 <div className="container">
+                    <div className="navik-header-container">
+                        <div className="logo" data-mobile-logo="images/logo-01.png"
+                             data-sticky-logo="images/logo-01.png">
 
-                <div className={`burger-menu ${isToggled ? "menu-open" : ""}`} onClick={handleToggle}>
-                            <div className="line-menu line-half first-line" />
-                            <div className="line-menu" />
-                            <div className="line-menu line-half last-line" />
-                        </div>
-
-                
-                <div className="navik-header-container">
-           
-
-                        
-
-                        <nav className="navik-menu menu-caret navik-yellow">
-                        <Link href="home">
+                            <Link href="/">
                                 <img
-                                src="/images/our-solution/logo.png" // Make sure this is the correct path to your logo image
-                                alt="header-logo"
-                                style={{ maxHeight: '80px', marginRight: '30px' }} // Adjust the max height as per your requirement
+                                    src="/images/our-solution/logo.png" // Make sure this is the correct path to your logo image
+                                    alt="header-logo" // Adjust the max height as per your requirement
                                 />
                             </Link>
+                        </div>
+
+                        <div className={`burger-menu ${isToggled ? "menu-open" : ""}`} onClick={handleToggle}>
+                            <div className="line-menu line-half first-line"/>
+                            <div className="line-menu"/>
+                            <div className="line-menu line-half last-line"/>
+                        </div>
+                        <nav className="navik-menu menu-caret navik-yellow">
                             <ul className={`top-list ${isToggled ? "d-block" : "d-none"}`}>
-                            
+
                                 <li className="dropdown_menu"><Link href="/our-solution">Our solution</Link>
                                 </li>
                                 <li className="dropdown_menu"><Link href="/how-to-start">How to start</Link>
                                 </li>
                                 <li className="dropdown_menu"><Link href="/pricing">Pricing</Link>
                                 </li>
-                                
                                 <li className="dropdown_menu"><Link href="/about-us">About us</Link>
                                 </li>
-
                                 <li className="dropdown_menu"><Link href="/contact-us">Contact</Link>
                                 </li>
-                            </ul>
-                            
-                            <ul className={isToggled ? "d-block" : "d-none"}>
-
-                                
                             </ul>
                         </nav>
                     </div>
                 </div>
             </header>
-</>
-)
+        </>
+    )
 }
-
-
-
 
 
 {/*
@@ -356,4 +345,5 @@ export default function Header1({ headerCls, scroll, isToggled, handleToggle }) 
         </>
     )
 }
-*/}
+*/
+}

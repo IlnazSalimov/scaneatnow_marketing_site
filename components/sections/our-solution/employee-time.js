@@ -7,9 +7,8 @@ export default function EmployeeTime({ icon, helperCls, newImg }) {
                     <div className="row d-flex align-items-center">
                         {/* ABOUT IMAGE */}
                         <div className="col-md-5 col-lg-5">
-                            <div className="about-3-img text-center mb-40">
-                                <img className="img-fluid" src={`/images/our-solution/${newImg ? newImg : "EmployeeTime.jpg"}`} alt="about-image" width="500"/>
-
+                            <div className="post-inner-img">
+                                <img className="img-fluid" src={`/images/our-solution/${newImg ? newImg : "EmployeeTime.jpg"}`} alt="about-image"/>
                             </div>
                         </div>
                         {/* ABOUT TEXT */}

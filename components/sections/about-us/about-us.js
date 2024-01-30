@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function AboutUs({ icon, helperCls, newImg }) {
+export default function AboutUs({icon, helperCls, newImg}) {
     return (
         <>
             <section id="about-3" className={`wide-60 about-section division ${helperCls ? helperCls : ""}`}>
@@ -9,7 +9,8 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                         {/* ABOUT IMAGE */}
                         <div className="col-md-5 col-lg-3">
                             <div className="about-3-img text-center mb-40">
-                                <img className="img-fluid" src={`/images/our-solution/${newImg ? newImg : "CEO.jpg"}`} alt="about-image"/>
+                                <img className="img-fluid" src={`/images/our-solution/${newImg ? newImg : "CEO.jpg"}`}
+                                     alt="about-image"/>
 
                             </div>
                         </div>
@@ -23,7 +24,8 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                         {/* Title */}
                                         <h2 className="h2-sm coffee-color">Scaneatnow is European startup</h2>
                                         {/* Text */}
-                                        <p className="p-md" style={{fontSize: '27px'}}>Our developers and sales managers are in Germany, Norway, Estonia
+                                        <p className="p-md" style={{fontSize: '27px'}}>Our developers and sales managers
+                                            are in Germany, Norway, Estonia
                                         </p>
                                         <p className="p-md" style={{fontSize: '27px'}}>CEO: Ilnaz Salimov
                                         </p>
@@ -44,7 +46,8 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                                 <div className="col-sm-3">
                                                     <div className="abox-2">
                                                         {/* Icon */}
-                                                        <div className="abox-2-ico grey-color"><span className="flaticon-burger" /></div>
+                                                        <div className="abox-2-ico grey-color"><span
+                                                            className="flaticon-burger"/></div>
                                                         {/* Text */}
                                                         <h6 className="h6-lg">Burgers</h6>
                                                     </div>
@@ -53,7 +56,8 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                                 <div className="col-sm-3">
                                                     <div className="abox-2">
                                                         {/* Icon */}
-                                                        <div className="abox-2-ico grey-color"><span className="flaticon-french-fries" /></div>
+                                                        <div className="abox-2-ico grey-color"><span
+                                                            className="flaticon-french-fries"/></div>
                                                         {/* Text */}
                                                         <h6 className="h6-lg">Fries</h6>
                                                     </div>
@@ -62,7 +66,8 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                                 <div className="col-sm-3">
                                                     <div className="abox-2">
                                                         {/* Icon */}
-                                                        <div className="abox-2-ico grey-color"><span className="flaticon-fried-chicken" /></div>
+                                                        <div className="abox-2-ico grey-color"><span
+                                                            className="flaticon-fried-chicken"/></div>
                                                         {/* Text */}
                                                         <h6 className="h6-lg">Chicken</h6>
                                                     </div>
@@ -71,13 +76,15 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                                 <div className="col-sm-3">
                                                     <div className="abox-2">
                                                         {/* Icon */}
-                                                        <div className="abox-2-ico grey-color"><span className="flaticon-salad" /></div>
+                                                        <div className="abox-2-ico grey-color"><span
+                                                            className="flaticon-salad"/></div>
                                                         {/* Text */}
                                                         <h6 className="h6-lg">Salads</h6>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>	{/* End Icons List */}
+                                        </div>
+                                        {/* End Icons List */}
 
                                     </>
                                     :
@@ -86,17 +93,23 @@ export default function AboutUs({ icon, helperCls, newImg }) {
                                         {/* Title */}
                                         <h2 className="h4-sm">Scaneatnow is a European startup</h2>
                                         {/* Text */}
-                                        <p className="p-md" style={{fontSize: '27px'}}>ScanEatNow is a European startup with developers and sales managers based in Germany, Norway, and Estonia
+                                        <p className="p-md" style={{fontSize: '27px'}}>ScanEatNow is a European startup
+                                            with developers and sales managers based in Germany, Norway, and Estonia
                                         </p>
                                         <p className="p-md" style={{fontSize: '27px'}}>CEO: Ilnaz Salimov
                                         </p>
-                                        <p className="p-md" style={{fontSize: '27px'}}>Email: <Link href="/mailto:ilnaz.salimov@scaneatnow.com" className="yellow-color" >ilnaz.salimov@scaneatnow.com</Link></p>
+                                        <p className="p-md" style={{fontSize: '27px'}}>Email: <Link
+                                            href="mailto:ilnaz.salimov@scaneatnow.com"
+                                            className="yellow-color">ilnaz.salimov@scaneatnow.com</Link></p>
                                     </>}
 
                             </div>
-                        </div>	{/* END ABOUT TEXT */}
-                    </div>	   {/* End row */}
-                </div>	   {/* End container */}
+                        </div>
+                        {/* END ABOUT TEXT */}
+                    </div>
+                    {/* End row */}
+                </div>
+                {/* End container */}
             </section>
         </>
     )

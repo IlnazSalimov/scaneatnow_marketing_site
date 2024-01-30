@@ -24,7 +24,10 @@ export default function About1({helperCls}) {
                                     <li style={bulletPointStyle}>Save your customers' time by reducing wait times.</li>
                                     <li style={bulletPointStyle}>Enhance customer satisfaction, translating to increased profitability for your business.</li>
                                 </ul>
-                                <img src="/images/our-solution/DigitalMenu.png" alt="about-image" width="700"/>
+
+                                <div className="post-inner-img">
+                                    <img class="img-fluid" src="/images/our-solution/DigitalMenu.png" alt="about-image"/>
+                                </div>
                                 {/* Text */}
                                 <p className="p-xl grey-color">
                                 </p>

@@ -3,8 +3,8 @@ import '@/public/assests/css/style.css'
 import '@/public/css/bootstrap.min.css'
 import '@/public/css/flaticon.css'
 import '@/public/css/menu.css'
-import '@/public/css/responsive.css'
 import '@/public/css/style.css'
+import '@/public/css/responsive.css'
 import "../node_modules/react-modal-video/css/modal-video.min.css"
 
 

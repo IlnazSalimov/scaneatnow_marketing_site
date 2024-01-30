@@ -17,10 +17,8 @@ export default function Forwhom({ icon, helperCls, newImg }) {
 
                         {/* ABOUT VIDEO */}
                         <div className="col-lg-4"> {/* Adjust the size as needed */}
-                        <div className="about-3-img text-center">
-                                <iframe 
-                                    width="560" 
-                                    height="315" 
+                        <div className="about-3-img text-center video-container">
+                                <iframe
                                     src={youtubeUrl} 
                                     title="YouTube video player" 
                                     frameBorder="0"

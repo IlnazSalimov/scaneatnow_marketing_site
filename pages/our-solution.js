@@ -15,7 +15,7 @@ import About4 from "@/components/sections/about/About4";
 import Blog1 from "@/components/sections/blog/Blog1";
 import Promo1 from "@/components/sections/promo/Promo1";
 
-export default function Home() {
+export default function OurSolution() {
     return (
         <>
             <Layout
@@ -37,11 +37,6 @@ export default function Home() {
                 <EmployeeTime />
 
                 <Efficiency />
-
-                {/*<Promo1 />
-
-    <Blog1 />*/}
-
 
             </Layout>
         </>
