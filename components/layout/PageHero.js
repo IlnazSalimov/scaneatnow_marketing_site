@@ -24,7 +24,7 @@ export default function PageHero({ pageTitle, activePage, pageId }) {
                                     </div>
                                 </div>
                                 {/* Title */}
-                                <h2 className="h2-xl">{pageTitle}</h2>
+                                <h1 className="h2-xl">{pageTitle}</h1>
                             </div>
                         </div>
                     </div>	  {/* End row */}

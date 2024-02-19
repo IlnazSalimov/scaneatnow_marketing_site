@@ -25,11 +25,9 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
         if (storedLocale) {
             setLocaleState(storedLocale);
         }
-        console.log("locale", locale)
     }, []);
 
     const setLocale: Dispatch<SetStateAction<string>> = (newLocale: SetStateAction<string>) => {
-        console.log("setLocale", newLocale)
         if (typeof newLocale === 'function') {
             setLocaleState((prevLocale: string) => {
                 const updatedLocale = (newLocale as (prevState: string) => string)(prevLocale);
