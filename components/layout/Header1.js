@@ -1,8 +1,11 @@
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import LanguageSwitcher from "../../components/elements/LanguageSwitcher";
+import {useLocaleContext} from "../../services/LocaleContext";
+import {t} from "../../services/i18nMiddleware";
 
 export default function Header1({headerCls, scroll, isToggled, handleToggle}) {
-
+    const { locale, setLocale } = useLocaleContext();
     const [isActive, setIsActive] = useState({
         status: false,
         key: "",
@@ -46,16 +49,17 @@ export default function Header1({headerCls, scroll, isToggled, handleToggle}) {
                         <nav className="navik-menu menu-caret navik-yellow">
                             <ul className={`top-list ${isToggled ? "d-block" : "d-none"}`}>
 
-                                <li className="dropdown_menu"><Link href="/our-solution">Our solution</Link>
+                                <li className="dropdown_menu"><Link href="/our-solution">{t('ourSolution', locale)}</Link>
                                 </li>
-                                <li className="dropdown_menu"><Link href="/how-to-start">How to start</Link>
+                                <li className="dropdown_menu"><Link href="/how-to-start">{t('howToStart', locale)}</Link>
                                 </li>
-                                <li className="dropdown_menu"><Link href="/pricing">Pricing</Link>
+                                <li className="dropdown_menu"><Link href="/pricing">{t('pricing', locale)}</Link>
                                 </li>
-                                <li className="dropdown_menu"><Link href="/about-us">About us</Link>
+                                <li className="dropdown_menu"><Link href="/about-us">{t('aboutUs', locale)}</Link>
                                 </li>
-                                <li className="dropdown_menu"><Link href="/contact-us">Contact</Link>
+                                <li className="dropdown_menu"><Link href="/contact-us">{t('contactUs', locale)}</Link>
                                 </li>
+                                <LanguageSwitcher/>
                             </ul>
                         </nav>
                     </div>

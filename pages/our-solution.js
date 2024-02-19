@@ -1,42 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import VideoPopup from "@/components/elements/VideoPopup";
-import Layout from "@/components/layout/Layout";
-import Newsletter1 from "@/components/sections/newsletter/Newsletter1";
-import Link from "next/link";
-
-import CustomerExperience from "@/components/sections/our-solution/customer-experience";
-import Forwhom from "@/components/sections/our-solution/for-whom";
-import VideoCounter from "@/components/sections/our-solution/video-demo-counter";
-import VideoTable from "@/components/sections/our-solution/video-demo-table";
-import EmployeeTime from "@/components/sections/our-solution/employee-time";
-import Efficiency from "@/components/sections/our-solution/efficiency";
-import ContactUs from "@/components/sections/our-solution/contact-us";
-import About4 from "@/components/sections/about/About4";
-import Blog1 from "@/components/sections/blog/Blog1";
-import Promo1 from "@/components/sections/promo/Promo1";
+import React from 'react';
+import Layout from "../components/layout/Layout";
+import CustomerExperience from "../components/sections/our-solution/customer-experience";
+import Forwhom from "../components/sections/our-solution/for-whom";
+import VideoCounter from "../components/sections/our-solution/video-demo-counter";
+import VideoTable from "../components/sections/our-solution/video-demo-table";
+import EmployeeTime from "../components/sections/our-solution/employee-time";
+import Efficiency from "../components/sections/our-solution/efficiency";
+import {useLocaleContext} from "../services/LocaleContext";
+import {t} from "../services/i18nMiddleware";
 
 export default function OurSolution() {
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <Layout
                 pageId={"about-page"}
-                activePage={"Our Solution"}
-                pageTitle={"Our Solution"}
-                headerStyle={1} 
+                activePage={t("ourSolution", locale)}
+                pageTitle={t("ourSolution", locale)}
+                headerStyle={1}
                 footerStyle={1}
             >
 
-                <Forwhom />
+                <Forwhom/>
 
-                <VideoCounter />
+                <VideoCounter/>
 
-                <VideoTable />
+                <VideoTable/>
 
-                <CustomerExperience />
+                <CustomerExperience/>
 
-                <EmployeeTime />
+                <EmployeeTime/>
 
-                <Efficiency />
+                <Efficiency/>
 
             </Layout>
         </>
@@ -190,4 +185,5 @@ export default function Home() {
         </>
     );
 }
-*/}
+*/
+}

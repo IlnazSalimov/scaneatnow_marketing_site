@@ -1,7 +1,5 @@
-import Layout from "@/components/layout/Layout";
-import Banner3 from "@/components/sections/banner/Banner3";
-import Link from "next/link";
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import Layout from "../../../components/layout/Layout";
 
 export default function Home() {
     // State to store form data
@@ -61,7 +59,8 @@ export default function Home() {
                             <div className="col-lg-10 offset-lg-1">
                                 <div className="section-title mb-40 text-center">
                                     <h2 className="h2-xl">Get in Touch</h2>
-                                    <p className="p-xl">Contact us if you have any questions or if you would like to schedule a demo.</p>
+                                    <p className="p-xl">Contact us if you have any questions or if you would like to
+                                        schedule a demo.</p>
                                 </div>
                             </div>
                         </div>
@@ -70,31 +69,38 @@ export default function Home() {
                                 <div className="form-holder">
                                     <form name="contactform" className="row contact-form" onSubmit={handleSubmit}>
                                         <div className="col-md-12 col-lg-6">
-                                            <input type="text" name="name" className="form-control name" placeholder="Your Name*" onChange={handleChange}/>
+                                            <input type="text" name="name" className="form-control name"
+                                                   placeholder="Your Name*" onChange={handleChange}/>
                                         </div>
                                         <div className="col-md-12 col-lg-6">
-                                            <input type="email" name="email" className="form-control email" placeholder="Email Address*" onChange={handleChange}/>
+                                            <input type="email" name="email" className="form-control email"
+                                                   placeholder="Email Address*" onChange={handleChange}/>
                                         </div>
                                         <div className="col-md-12">
-                                            <input type="text" name="subject" className="form-control subject" placeholder="What's this about?" onChange={handleChange}/>
+                                            <input type="text" name="subject" className="form-control subject"
+                                                   placeholder="What's this about?" onChange={handleChange}/>
                                         </div>
                                         <div className="col-md-12">
-                                            <textarea name="message" className="form-control message" rows={6} placeholder="Your Message ..." defaultValue={""} onChange={handleChange}/>
+                                            <textarea name="message" className="form-control message" rows={6}
+                                                      placeholder="Your Message ..." defaultValue={""}
+                                                      onChange={handleChange}/>
                                         </div>
                                         <div className="col-md-12 mt-5 text-right">
-                                            <button type="submit" className="btn btn-md btn-red tra-red-hover submit">Send Message</button>
+                                            <button type="submit"
+                                                    className="btn btn-md btn-red tra-red-hover submit">Send Message
+                                            </button>
                                         </div>
                                         <div className="col-md-12 contact-form-msg text-center">
-                                            <div className="sending-msg"><span className="loading" /></div>
+                                            <div className="sending-msg"><span className="loading"/></div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                        </div>  
-                    </div>	   
-                </section>	
+                        </div>
+                    </div>
+                </section>
 
-                
+
             </Layout>
         </>
     );

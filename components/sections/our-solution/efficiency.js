@@ -1,3 +1,6 @@
+import {t} from "../../../services/i18nMiddleware";
+import {useLocaleContext} from "../../../services/LocaleContext";
+
 const bulletPointStyle = {
     fontSize: '27px', // Adjust bullet point font size
     lineHeight: '1.4', // Adjust bullet point line height
@@ -6,6 +9,7 @@ const bulletPointStyle = {
 };
 
 export default function Efficiency({helperCls}) {
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <section id="about-1" className={`bg-fixed wide-100 about-section division ${helperCls ? helperCls : ""}`}>
@@ -15,19 +19,16 @@ export default function Efficiency({helperCls}) {
                         <div className="col-xl-10 offset-xl-1">
                             <div className="about-1-txt text-center">
                                 {/* Title */}
-                                <h2>Enhance the <span className="yellow-color">efficiency</span> of your services</h2>
+                                <h2 dangerouslySetInnerHTML={{__html: t('enhanceEfficiencyOfServices', locale)}}></h2>
                                 <ul style={{paddingLeft: '50px', listStyleType: 'disc'}}>
-                                    <li style={bulletPointStyle}>Automatically or manually translate your menu into
-                                        multiple languages
-                                    </li>
-                                    <li style={bulletPointStyle}>Include photos, allergen, and other essential
-                                        information in your digital menu
-                                    </li>
-                                    <li style={bulletPointStyle}>Exclude human errors</li>
-                                    <li style={bulletPointStyle}>Organize the order-picking process</li>
+                                    <li style={bulletPointStyle}>{t('translateMenuIntoMultipleLanguages', locale)}</li>
+                                    <li style={bulletPointStyle}>{t('includeEssentialInformationInDigitalMenu', locale)}</li>
+                                    <li style={bulletPointStyle}>{t('eliminateHumanErrors', locale)}</li>
+                                    <li style={bulletPointStyle}>{t('organizeOrderPickingProcess', locale)}</li>
                                 </ul>
                                 <div className="post-inner-img">
-                                    <img className="img-fluid" src="/images/our-solution/Efficiency.png" alt="about-image" width="1100"/>
+                                    <img className="img-fluid" src="/images/our-solution/Efficiency.png"
+                                         alt="about-image" width="1100"/>
                                 </div>
                                 {/* Text */}
                                 <p className="p-xl grey-color">

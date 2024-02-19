@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import VideoPopup from "@/components/elements/VideoPopup";
-import Layout from "@/components/layout/Layout";
-import Newsletter1 from "@/components/sections/newsletter/Newsletter1";
-import Link from "next/link";
+import React from 'react';
+import Layout from "../components/layout/Layout";
+import AboutUs from "../components/sections/about-us/about-us";
+import {t} from "../services/i18nMiddleware";
+import {useLocaleContext} from "../services/LocaleContext";
 
-import AboutUs from "@/components/sections/about-us/about-us";
-import Forwhom from "@/components/sections/our-solution/for-whom";
-import EmployeeTime from "@/components/sections/our-solution/employee-time";
-import Efficiency from "@/components/sections/our-solution/efficiency";
-import ContactUs from "@/components/sections/our-solution/contact-us";
-import About4 from "@/components/sections/about/About4";
-import Blog1 from "@/components/sections/blog/Blog1";
-import Promo1 from "@/components/sections/promo/Promo1";
 
 export default function Home() {
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <Layout
                 pageId={"about-page"}
-                activePage={"About us"}
-                pageTitle={"About Us"}
+                activePage={t("aboutUs", locale)}
+                pageTitle={t("aboutUs", locale)}
                 headerStyle={1} 
                 footerStyle={1}
             >

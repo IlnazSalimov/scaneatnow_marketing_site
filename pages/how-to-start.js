@@ -1,13 +1,15 @@
-import Layout from "@/components/layout/Layout";
-import Banner3 from "@/components/sections/banner/Banner3";
-import Link from "next/link";
+import Layout from "../components/layout/Layout";
+import { t } from "../services/i18nMiddleware";
+import {useLocaleContext} from "../services/LocaleContext";
+
 export default function Home() {
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <Layout
                 pageId={"gift-page"}
-                activePage={"How to start"}
-                pageTitle={"How to start"}
+                activePage={t("howToStart", locale)}
+                pageTitle={t("howToStart", locale)}
                 headerStyle={1}
                 footerStyle={1}
             >
@@ -19,10 +21,9 @@ export default function Home() {
                             <div className="col-lg-10 offset-lg-1">
                                 <div className="section-title mb-60 text-center">
                                     {/* Title 	*/}
-                                    <h2 className="h2-xl">Start using scaneatnow in 3 simple steps</h2>
+                                    <h2 className="h2-xl">{t("startUsingScaneatnowIn3SimpleSteps", locale)}</h2>
                                     {/* Text */}
-                                    <p className="p-xl">You do no need to change anything in your existing software if you want to use our solution in its default configuration. If you want to integrate our solution into your existing system - please contact us.
-                                    </p>
+                                    <p className="p-xl">{t("noNeedToChangeAnythingInExistingSoftware", locale)}</p>
                                 </div>
                             </div>
                         </div>
@@ -33,9 +34,9 @@ export default function Home() {
                                     {/* Image */}
                                     <img className="img-fluid" src="/images/our-solution/Step1.png" alt="card-image" />
                                     {/* Title */}
-                                    <h5 className="h5-xl">Install our app for Android</h5>
+                                    <h5 className="h5-xl">{t("installOurAppForAndroid", locale)}</h5>
                                     {/* Text */}
-                                    <p className="p-sm grey-color">Create your restaurant profile, digital menu, tables in the app</p>
+                                    <p className="p-sm grey-color">{t("createRestaurantProfileDigitalMenuTablesInTheApp", locale)}</p>
                                 </div>
                             </div>
                             {/* CARD #2 */}
@@ -44,9 +45,9 @@ export default function Home() {
                                     {/* Image */}
                                     <img className="img-fluid" src="/images/our-solution/Step2.png" alt="card-image" />
                                     {/* Title */}
-                                    <h5 className="h5-xl">Put QR codes on the tables</h5>
+                                    <h5 className="h5-xl">{t("putQRCodesOnTheTables", locale)}</h5>
                                     {/* Text */}
-                                    <p className="p-sm grey-color">You will receive QR codes from us, then you can print them and set on your tables</p>
+                                    <p className="p-sm grey-color">{t("youWillReceiveQRCodesFromUs", locale)}</p>
                                 </div>
                             </div>
                             {/* CARD #3 */}
@@ -55,9 +56,9 @@ export default function Home() {
                                     {/* Image */}
                                     <img className="img-fluid" src="/images/our-solution/Step3.png" alt="card-image" />
                                     {/* Title */}
-                                    <h5 className="h5-xl">Enjoy a new enhanced process</h5>
+                                    <h5 className="h5-xl">{t("enjoyANewEnhancedProcess", locale)}</h5>
                                     {/* Text */}
-                                    <p className="p-sm grey-color">You will automatically receive payments from customers. Orders will come to your Andoid app</p>
+                                    <p className="p-sm grey-color">{t("youWillAutomaticallyReceivePaymentsFromCustomers", locale)}</p>
                                 </div>
                             </div>
                         </div> {/* End row */}

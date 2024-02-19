@@ -1,6 +1,9 @@
+import {t} from "../../../services/i18nMiddleware";
+import {useLocaleContext} from "../../../services/LocaleContext";
 
 export default function Forwhom({ icon, helperCls, newImg }) {
     const youtubeUrl = "https://www.youtube.com/embed/evZwsIagNNw";
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <section id="about-3" className={`wide-60 about-section division ${helperCls ? helperCls : ""}`}>
@@ -10,7 +13,7 @@ export default function Forwhom({ icon, helperCls, newImg }) {
                         <div className="col-lg-8"> {/* Adjust the size as needed */}
                             <div className="about-1-txt">
                                 {/* Title */}
-                                <h4 className="h2-sm coffee-color">View the <strong style={{ color: 'blue', fontWeight: 'bold' }}>demo</strong> of our solution for restauarants offering <strong style={{ color: 'blue', fontWeight: 'bold' }}>table service.</strong></h4>
+                                <h4 className="h2-sm coffee-color" dangerouslySetInnerHTML={{ __html: t("demoTable", locale) }}></h4>
                                 {/* Other text and elements */}
                             </div>
                         </div> {/* END ABOUT TEXT */}

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { t } from "../../../services/i18nMiddleware";
+import {useLocaleContext} from "../../../services/LocaleContext";
 
 const bulletPointStyle = {
     fontSize: '27px', // Adjust bullet point font size
@@ -7,7 +9,8 @@ const bulletPointStyle = {
     textAlign: 'left',
 };
 
-export default function About1({helperCls}) {
+export default function About1({ helperCls }) {
+    const {locale, setLocale} = useLocaleContext();
     return (
         <>
             <section id="about-1" className={`bg-fixed wide-100 about-section division ${helperCls ? helperCls : ""}`}>
@@ -17,16 +20,16 @@ export default function About1({helperCls}) {
                         <div className="col-xl-10 offset-xl-1">
                             <div className="about-1-txt text-center">
                                 {/* Title */}
-                                <h2>Improve your<span className="yellow-color"> customers' experience</span></h2>
-                                <ul style={{ paddingLeft: '50px', listStyleType: 'disc' }}> 
-                                    <li style={bulletPointStyle}>Provide instant menu access with automatic translation, allergen information, and item photos.</li>
-                                    <li style={bulletPointStyle}>Streamline ordering with online payment and order status updates.</li>
-                                    <li style={bulletPointStyle}>Save your customers' time by reducing wait times.</li>
-                                    <li style={bulletPointStyle}>Enhance customer satisfaction, translating to increased profitability for your business.</li>
+                                <h2 dangerouslySetInnerHTML={{ __html: t('improveCustomersExperience', locale) }}></h2>
+                                <ul style={{ paddingLeft: '50px', listStyleType: 'disc' }}>
+                                    <li style={bulletPointStyle}>{t("provideInstantMenuAccess", locale)}</li>
+                                    <li style={bulletPointStyle}>{t("streamlineOrdering", locale)}</li>
+                                    <li style={bulletPointStyle}>{t("saveCustomersTime", locale)}</li>
+                                    <li style={bulletPointStyle}>{t("enhanceCustomerSatisfaction", locale)}</li>
                                 </ul>
 
                                 <div className="post-inner-img">
-                                    <img class="img-fluid" src="/images/our-solution/DigitalMenu.png" alt="about-image"/>
+                                    <img className="img-fluid" src="/images/our-solution/DigitalMenu.png" alt="about-image" />
                                 </div>
                                 {/* Text */}
                                 <p className="p-xl grey-color">
