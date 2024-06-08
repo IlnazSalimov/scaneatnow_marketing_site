@@ -1,10 +1,14 @@
+"use client"
+
 import Head from 'next/head';
 
 const PageHead = ({headTitle}) => {
     return (
         <>
             <Head>
-                <title>QR Code Ordering and Online Payments - {headTitle ? headTitle : "QR Code Ordering and Online Payments"}</title>
+                <title>
+                    {headTitle ? `QR Code Ordering and Online Payments - ${headTitle}` : 'QR Code Ordering and Online Payments'}
+                </title>
                 <meta name="description"
                       content="Enhance customer experience and streamline operations for restaurants, cafeterias, and food courts with our solution. Provide instant menu access with automatic translation, allergen information, and item photos. Enable online ordering with payment and status updates. Free up employees' time and optimize service efficiency. Automatically translate menus into multiple languages, reduce errors, and organize order picking."/>
                 <meta name="keywords"
@@ -17,7 +21,7 @@ const PageHead = ({headTitle}) => {
                 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet"/>
 
                 <link href="https://use.fontawesome.com/releases/v5.11.0/css/all.css" rel="stylesheet"
-                      crossorigin="anonymous"/>
+                      crossOrigin="anonymous"/>
             </Head>
         </>
     );

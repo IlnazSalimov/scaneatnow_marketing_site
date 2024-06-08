@@ -1,8 +1,14 @@
-import { t } from "../../../services/i18nMiddleware";
-import { useLocaleContext } from "../../../services/LocaleContext";
+import {t} from "../../../services/i18nMiddleware";
+import {useLocaleContext} from "../../../services/LocaleContext";
+import {useRouter} from "next/router";
 
-export default function Forwhom({ icon, helperCls, newImg }) {
-    const { locale, setLocale } = useLocaleContext();
+export default function Forwhom({icon, helperCls, newImg}) {
+    const {locale, setLocale} = useLocaleContext();
+    const router = useRouter();
+
+    const handleRedirect = () => {
+        router.push('/contact-us'); // replace with your target page URL
+    };
 
     return (
         <>
@@ -14,7 +20,7 @@ export default function Forwhom({ icon, helperCls, newImg }) {
                             <div className="about-3-img text-center mb-40">
                                 <img className="img-fluid"
                                      src={`/images/our-solution/${newImg ? newImg : "for_whom.png"}`}
-                                     alt="about-image" />
+                                     alt="about-image"/>
 
                             </div>
                         </div>
@@ -24,18 +30,26 @@ export default function Forwhom({ icon, helperCls, newImg }) {
                                 {/* Title */}
                                 <h2 className="h2-sm">{t('forWhomIsOurSolution', locale)}</h2>
                                 {/* Text */}
-                                <p className="p-md" style={{ fontSize: '27px' }}>{t("restaurantsCafeteriasFoodCourts", locale)}
+                                <p className="p-md"
+                                   style={{fontSize: '27px'}}>{t("restaurantsCafeteriasFoodCourts", locale)}
                                 </p>
                                 {/* List */}
                                 <ul className="txt-list">
                                     <li className="list-item">
-                                        <p className="p-md" style={{ fontSize: '27px' }}>{t("withCounterService", locale)}
+                                        <p className="p-md" style={{fontSize: '27px'}}>{t("withCounterService", locale)}
                                         </p>
                                     </li>
                                     <li className="list-item">
-                                        <p className="p-md" style={{ fontSize: '27px' }}>{t("withTableService", locale)}</p>
+                                        <p className="p-md"
+                                           style={{fontSize: '27px'}}>{t("withTableService", locale)}</p>
                                     </li>
                                 </ul>
+                                <div className="mt-4">
+                                    <button type="button"
+                                            onClick={handleRedirect}
+                                            className="btn btn-md btn-red tra-red-hover submit">{t("bookDemo", locale)}
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         {/* END ABOUT TEXT */}

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://scaneatnow.com/sitemap.xml

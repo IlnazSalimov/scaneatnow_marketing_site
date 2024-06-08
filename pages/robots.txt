@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /our-solution/
-Allow: /how-to-start/
-Allow: /pricing/
-Allow: /about-us/
-Allow: /contact-us/
